@@ -10,3 +10,13 @@
 .detail-display {
   display: none;
 }
+
+.High {
+  background-color: red;
+}
+.Medium {
+  background-color: orange;
+}
+.Low {
+  background-color: lightblue;
+}

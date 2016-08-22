@@ -11,6 +11,7 @@ Task.prototype.allDetail = function() {
 }
 
 $(document).ready(function () {
+
   $("#input-form").submit(function(event){
     event.preventDefault();
 
@@ -22,8 +23,7 @@ $(document).ready(function () {
     var myTask = new Task (taskName, deadline, priority, details);
 
 
-
-    $("#task-list").append("<li><span class='listedTask'>" + taskName + "</span></li>");
+    $("#task-table").append("<tr><td><span class='glyphicon glyphicon-flash " + priority + "'></span></td><td><span class='listedTask'>" + taskName + "</span></td><td><span class='markComplete'>Mark Complete</span></td></tr>");
     $(".listedTask").last().click(function() {
       $(".detail-display").show();
       $(".task-name").text(myTask.taskName);

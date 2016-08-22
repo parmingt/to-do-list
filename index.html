@@ -14,7 +14,7 @@
 
         <!-- input form -->
         <div class="col-sm-4">
-          <h2>Add a new task</h2>
+          <h3>Add a new task</h3>
           <form id="input-form">
             <div class="form-group row">
               <label for="task-name-input" class="col-sm-4 col-form-label">Task:</label>
@@ -47,21 +47,26 @@
                 <input class="form-control" type="text" id="details-input">
               </div>
             </div>
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn btn-primary">Add</button>
           </form>
         </div>
 
         <!-- task list -->
         <div class="col-sm-4">
-          <h2>Tasks to complete:</h2>
-          <ul id="task-list">
-          </ul>
+          <h3>Tasks to complete:</h3>
+          <table class="table" id='task-table'>
+            <tr>
+              <th>Priority</th>
+              <th>Task</th>
+              <th>Completed</th>
+            </tr>
+          </table>
         </div>
 
         <!-- details display -->
         <div class="col-sm-4">
           <div class="detail-display">
-            <h2>Details:</h2>
+            <h3>Details:</h3>
             <h4><span class="task-name"></span></h4>
             <div class="details"></div>
           </div>
