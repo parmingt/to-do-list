@@ -15,7 +15,7 @@ _This is a web application where people can add tasks to create a list of things
 * Example Input: "Take out trash
 * Example Output: "Take out trash"
 
-#### 2. A user can indicate when a task indicate when a task is due.
+#### 2. A user can indicate when a task is due.
 
 * Example: Select date from calendar.
 
