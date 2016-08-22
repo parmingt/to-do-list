@@ -50,17 +50,29 @@ $(document).ready(function () {
         completedTasks.push(task);
         taskArray.splice(index,1);
         displayTaskArray();
-        moveCompletedTask(task);
+        displayCompletedArray();
 
-        if(completedTasks.length > 0){
-          $(".completed-tasks").show();
-        } else {
-          $(".completed-tasks").hide();
-        }
 
       });
     });
   }
+
+  function displayCompletedArray(){
+    if(completedTasks.length > 0){
+      $(".completed-tasks").show();
+    } else {
+      $(".completed-tasks").hide();
+    }
+    $("#completed-task-table > tbody").empty();
+    completedTasks.forEach(function(task, index){
+      moveCompletedTask(task);
+      $(".remove").last().click(function(){
+        completedTasks.splice(index,1);
+        displayCompletedArray();
+      });
+    });
+  }
+
   function makeTaskRow(task) {
     $("#task-table > tbody").append("<tr><td><span class='glyphicon glyphicon-flash priority" + task.priority + "'></span></td><td><span class='listedTask'>" + task.taskName + "</span></td><td><button class='markComplete'>Mark Complete</button></td></tr>");
   }
