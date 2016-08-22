@@ -1,3 +1,15 @@
+h3, label, th {
+  font-family: 'Nunito', sans-serif;
+}
+
+input, table {
+  font-family: 'Lato', sans-serif;
+}
+
+textarea {
+  width: 100%;
+}
+
 .listedTask {
   cursor: pointer;
   color: blue;
