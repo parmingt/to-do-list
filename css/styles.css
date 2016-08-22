@@ -6,3 +6,7 @@
 .listedTask:hover {
   text-decoration: underline;
 }
+
+.detail-display {
+  display: none;
+}
