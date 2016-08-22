@@ -15,6 +15,8 @@ $(document).ready(function () {
     var details = $("#details-input").val();
 
     var myTask = new Task (taskName, deadline, priority, details);
+
+    $("#task-list").append("<li>" + taskName + "</li>");
     
 
   })
