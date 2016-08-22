@@ -7,7 +7,15 @@ function Task(taskName, deadline, priority, details){
 
 Task.prototype.allDetail = function() {
   var deadlineReformat = moment(this.deadline).fromNow();
-  return "Deadline: " + deadlineReformat + "<br>Priority: " + this.priority + "<br>Details: " + this.details;
+  var priorityText;
+  if(this.priority === 3){
+    priorityText = "High";
+  } else if (this.priority === 2){
+    priorityText = "Medium";
+  } else {
+    priorityText = "Low";
+  }
+  return "Deadline: " + deadlineReformat + "<br>Priority: " + priorityText + "<br>Details: " + this.details;
 }
 
 $(document).ready(function () {
