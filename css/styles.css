@@ -1,0 +1,8 @@
+.listedTask {
+  cursor: pointer;
+  color: blue;
+}
+
+.listedTask:hover {
+  text-decoration: underline;
+}
