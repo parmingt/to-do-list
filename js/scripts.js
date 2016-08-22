@@ -39,7 +39,7 @@ $(document).ready(function () {
   function displayTaskArray(){
     $("#task-table > tbody").empty();
     taskArray.forEach(function(task, index){
-      $("#task-table > tbody").append("<tr><td><span class='glyphicon glyphicon-flash priority" + task.priority + "'></span></td><td><span class='listedTask'>" + task.taskName + "</span></td><td><button class='markComplete'>Mark Complete</button></td></tr>");
+      makeTaskRow(task);
       $(".listedTask").last().click(function() {
         $(".detail-display").show();
         $(".task-name").text(task.taskName);
@@ -50,15 +50,23 @@ $(document).ready(function () {
         completedTasks.push(task);
         taskArray.splice(index,1);
         displayTaskArray();
-        $("#completed-task-table > tbody").append("<tr><td><span class='glyphicon glyphicon-flash priority" + task.priority + "'></span></td><td><span class='listedTask'>" + task.taskName + "</span></td></tr>");
+        moveCompletedTask(task);
 
         if(completedTasks.length > 0){
           $(".completed-tasks").show();
         } else {
           $(".completed-tasks").hide();
         }
+
       });
     });
-
   }
+  function makeTaskRow(task) {
+    $("#task-table > tbody").append("<tr><td><span class='glyphicon glyphicon-flash priority" + task.priority + "'></span></td><td><span class='listedTask'>" + task.taskName + "</span></td><td><button class='markComplete'>Mark Complete</button></td></tr>");
+  }
+  function moveCompletedTask(task) {
+    $("#completed-task-table > tbody").append("<tr><td><span class='glyphicon glyphicon-flash priority" + task.priority + "'></span></td><td><span class='listedTask'>" + task.taskName + "</span></td><td><button class='remove'>Remove</button></td></tr>");
+  }
+
+
 });
