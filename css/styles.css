@@ -11,12 +11,16 @@
   display: none;
 }
 
-.High {
+.priority3 {
   background-color: red;
 }
-.Medium {
+.priority2 {
   background-color: orange;
 }
-.Low {
+.priority1 {
   background-color: lightblue;
+}
+
+.completed-tasks {
+  display: none;
 }
