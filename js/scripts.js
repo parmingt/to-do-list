@@ -3,11 +3,11 @@ function Task(taskName, deadline, priority, details){
   this.deadline = deadline;
   this.priority = priority;
   this.details = details;
-
 }
 
 Task.prototype.allDetail = function() {
-  return "Deadline: " + this.deadline + "<br>Priority: " + this.priority + "<br>Details: " + this.details;
+  var deadlineReformat = moment(this.deadline).fromNow();
+  return "Deadline: " + deadlineReformat + "<br>Priority: " + this.priority + "<br>Details: " + this.details;
 }
 
 $(document).ready(function () {

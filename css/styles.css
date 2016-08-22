@@ -2,8 +2,12 @@ h3, label, th {
   font-family: 'Nunito', sans-serif;
 }
 
-input, table {
+input, table, .detail-display {
   font-family: 'Lato', sans-serif;
+}
+
+.task-name {
+  font-weight: bold;
 }
 
 textarea {
