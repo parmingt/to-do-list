@@ -31,6 +31,8 @@ _This is a web application where people can add tasks to create a list of things
 
 * Example: Take out trash on Thursday morning (priority: high)
 
+#### 6. When a user clicks on a listed task item, the details of that item are displayed on the screen.
+
 ## Setup/Installation Requirements
 
 * Clone this repository
