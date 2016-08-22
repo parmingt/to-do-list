@@ -10,13 +10,21 @@ input, table, .detail-display {
   font-weight: bold;
 }
 
+.markComplete {
+  background-color: #66CC00;
+}
+
+.remove {
+  background-color: #CC0000;
+}
+
 textarea {
   width: 100%;
 }
 
 .listedTask {
   cursor: pointer;
-  color: blue;
+  color: darkgray;
 }
 
 .listedTask:hover {
